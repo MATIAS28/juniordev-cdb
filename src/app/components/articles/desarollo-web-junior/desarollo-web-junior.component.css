@@ -1,0 +1,28 @@
+.resultado{
+  background: #ccc;
+  border-left: 2px solid #ff6620;
+}
+
+.resaltado-h2{
+  color: #6490a7;
+  text-decoration: underline;
+  padding: 12px;
+}
+
+.img{
+  width: 70%;
+  margin: 0px auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.BJS{
+  cursor: pointer;
+  width: 50%;
+  height: 50px;
+  border-radius: 8px;
+  text-align: center;
+  background: #e9d54d;
+  padding: 5px;
+  transition: all 600ms;
+}
