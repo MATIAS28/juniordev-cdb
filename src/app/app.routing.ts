@@ -10,7 +10,8 @@ import { DesarolloWebJuniorComponent } from './components/articles/desarollo-web
     {path: '', component: AboutComponent},
     {path: 'about', component: AboutComponent},
     {path:'por-donde-empezar-a-programar', component: DesarolloWebComponent},
-    {path:'por-donde-empezar-en-el-desarollo-web', component: DesarolloWebJuniorComponent}
+    {path:'por-donde-empezar-en-el-desarollo-web', component: DesarolloWebJuniorComponent},
+    {path: '**', component: AboutComponent}
   ];
 
 
