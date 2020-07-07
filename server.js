@@ -15,15 +15,6 @@ app.get('/*', function(req,res) {
 res.sendFile(path.join(__dirname+'/dist/juniordev/index.html'));
 });
 
-//Conexion a la base de datos
-
-mongoose.Promise = global.Promise;
-mongoose.connect("process.env.MONGODB_URI", { connectWithNoPrimary: true, useNewUrlParser: true })
-                .then(() => {
-                  console.log('Conectado a la base de datos');                 
-                })
-                .catch(err => console.log(err));
-
 //Rutas
 app.use('/', article_routes);
 
