@@ -18,7 +18,7 @@ res.sendFile(path.join(__dirname+'/dist/juniordev/index.html'));
 //Conexion a la base de datos
 var port = process.env.PORT || 3700;
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb+srv://Matmun:Mocorillo123@kobdb-ybabt.mongodb.net/KOBdb?retryWrites=true&w=majority", { connectWithNoPrimary: true, useNewUrlParser: true })
+mongoose.connect("process.env.MONGODB_URI", { connectWithNoPrimary: true, useNewUrlParser: true })
                 .then(() => {
                   console.log('Conectado a la base de datos');
                   /*Creacion del servidor*/
