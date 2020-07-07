@@ -16,32 +16,19 @@ res.sendFile(path.join(__dirname+'/dist/juniordev/index.html'));
 });
 
 //Conexion a la base de datos
-var port = process.env.PORT || 3700;
+
 mongoose.Promise = global.Promise;
 mongoose.connect("process.env.MONGODB_URI", { connectWithNoPrimary: true, useNewUrlParser: true })
                 .then(() => {
-                  console.log('Conectado a la base de datos');
-                  /*Creacion del servidor*/
-                  app.listen(port, () => {
-                    console.log('servidor corriendo correctamente en <localhost: 3700/>');
-                  });
+                  console.log('Conectado a la base de datos');                 
                 })
                 .catch(err => console.log(err));
-
-
-//Cors
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
-
-    next();
-});
 
 //Rutas
 app.use('/', article_routes);
 
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);
 
 //exportar
 module.exports = app;
