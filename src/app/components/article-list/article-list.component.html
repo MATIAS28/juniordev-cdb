@@ -1,0 +1,26 @@
+<div class="articles-list">
+
+  <h1 style="text-align: center;">Articulos</h1>
+
+  <div class="articles" *ngIf="articles">
+    <div id="card">
+      <div class="card-group" *ngFor="let article of articles">
+        <div [routerLink]="['/articulo', article._id]" class="card">
+          <!--img src="assets/img/B1.jpg" class="card-img-top" alt="..."-->
+          <div class="card-body">
+            <h5 class="card-title">{{article.title}}</h5>
+            <p class="card-text">{{article.resumen}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{article.date}}</small>
+          </div>
+        </div>
+      </div>
+   </div>
+  </div>
+
+  <div *ngIf="!articles" class="gif-carga">
+    <img src="assets/cargando.gif" alt="">
+  </div>
+
+</div>

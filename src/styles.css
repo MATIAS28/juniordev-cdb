@@ -110,26 +110,15 @@ article.about{
 
 
 /**/
-.message{
-  margin-bottom: 30px;
-  width: 40%;
-  padding: 8px;
+.BJS{
+  cursor: pointer;
+  width: 50%;
+  height: 50px;
   border-radius: 8px;
-  color: white;
-  box-shadow: 0px 0px 8px black;
-}
-
-.success{
-  background: #1e292f;
-}
-
-.success a{
-  color: white;
-  text-decoration: underline;
-}
-
-.failed{
-  background: #691313;
+  text-align: center;
+  background: #e9d54d;
+  padding: 5px;
+  transition: all 600ms;
 }
 
 
@@ -146,12 +135,12 @@ article.about{
 
 
 
-/*Página de Proyecto*/
-.img-proyecto{
-  display: block;
-  max-width: 50%;
+/*Articulo*/
+#img img{
+  width: 100%;
   margin: 0px auto;
-  border-radius: 4px;
+  display: block;
+  margin-bottom: 20px;
 }
 
 .data{
@@ -182,8 +171,10 @@ article.about{
   font-weight: 700;
 }
 
-.fuente{
-
+.resaltado-h2{
+  color: #6490a7;
+  text-decoration: underline;
+  padding: 12px;
 }
 
 .card{
