@@ -23,7 +23,7 @@ res.sendFile(path.join(__dirname+'/dist/juniordev/index.html'));
 app.use('/', article_routes);
 
 //DB conection
-mongoose.connect(process.env.MONGODB_URI, { connectWithNoPrimary: true, useNewUrlParser: true })
+mongoose.connect("mongodb+srv://Matmun:Mocorillo123@kobdb-ybabt.mongodb.net/KOBdb?retryWrites=true&w=majority", { connectWithNoPrimary: true, useNewUrlParser: true })
                 .then(() => {
                   console.log('Conectado a la base de datos');
                 })
