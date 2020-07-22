@@ -7,6 +7,9 @@ const app = express();
 //Cargar archivos de Rutas
 var article_routes = require('./backend/routes/article');
 
+//Rutas
+app.use('/api', article_routes);
+
 //middlewares
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -18,9 +21,6 @@ app.get('/*', function(req,res) {
 
 res.sendFile(path.join(__dirname+'/dist/juniordev/index.html'));
 });
-
-//Rutas
-app.use('/api', article_routes);
 
 //DB conection
 var mongoose = require('mongoose');
