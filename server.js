@@ -20,7 +20,7 @@ res.sendFile(path.join(__dirname+'/dist/juniordev/index.html'));
 });
 
 //Rutas
-app.use('/', article_routes);
+app.use('/api', article_routes);
 
 //DB conection
 var mongoose = require('mongoose');
