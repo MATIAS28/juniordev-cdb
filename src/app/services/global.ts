@@ -1,3 +1,3 @@
 export var Global = {
-  url: "/api/"
+  url: "process.env.PORT/api/"
 };
